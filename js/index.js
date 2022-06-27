@@ -46,6 +46,7 @@ function initScreenAnd3D() {
   camera.lookAt(new THREE.Vector3(0, 60, 0));
 
   renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+  renderer.setPixelRatio( window.devicePixelRatio );
   renderer.setSize(WIDTH, HEIGHT);
   renderer.shadowMapEnabled = true;
   
@@ -241,7 +242,7 @@ Ball = function(){
 
 /* 
 The next part of the code is largely inspired by this codepen :
-http://codepen.io/dissimulate/pen/KrAwx?editors=001
+https://codepen.io/dissimulate/pen/KrAwx?editors=001
 thanks to dissimulate for his great work
 */
 
